@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+</head>
+<body>
+    <h3>Your six-digit OTP is <span id="s" style="color: red;">123456</span>. Use it carefully.</h3>
+    <button onclick="getOtp()">Get OTP</button>
+    <script>
+        function getOtp() {
+            let otp = "";
+            for (let i = 0; i < 6; i++) { 
+                otp += Math.floor(Math.random() * 10); 
+            }
+            document.getElementById('s').textContent = otp; 
+        }
+    </script>
+</body>
+</html>
